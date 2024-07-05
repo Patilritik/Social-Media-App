@@ -41,9 +41,6 @@ export async function POST(request) {
             console.log("error in deleting image" , error);
         }
     }
-
-
-
     //Updation of image in mongo
     const user = await User.updateOne(
         { userName: userName }, // Filter criteria

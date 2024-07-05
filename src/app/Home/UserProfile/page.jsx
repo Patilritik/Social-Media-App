@@ -57,7 +57,7 @@ export default function UserProfile() {
     const now = new Date();
     const second = Math.floor((now - date) / 1000);
     if (second < 60) {
-      return `${second} second ${seconds !== 1 ? '' : ""}ago`
+      return `${second} second ${second !== 1 ? '' : ""}ago`
     }
 
     const minutes = Math.floor(second / 60);
