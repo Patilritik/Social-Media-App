@@ -1,42 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Social Media App
+- This is a social media application built using Next.js and MongoDB. The app allows users to create accounts, post updates, makes friend other users.
 
-## Getting Started
+## Features
+ - User authentication (sign up, login, logout)
+ - Create, edit, delete posts
+ - Friend/unfriend users
+ - User profile with posts and activity
 
-First, run the development server:
+## Tech Stack
+ - Frontend: Next.js, React
+ - Backend: Next.js 
+ - Database: MongoDB
+ - Authentication: JWT (JSON Web Tokens) 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation
+ 1.  Clone the repository:
+    
+   `git clone https://github.com/your-username/social-media-app.git`
+ 
+   `cd social-media-app`
+ 
+ 2. Install dependencies:
+   
+   `npm install`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ 3. Set up MongoDB:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+   - Ensure you have MongoDB installed and running.
+ 
+ 4. Create a new MongoDB database for the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ 5. Set up environment variables:
 
-## Learn More
+  - Create a .env.local file in the root directory.
+  - Add the following environment variables:
+   
+   `MONGODB_URI = your-mongodb-connection-string`
+   `JWT_SECRET = your-jwt-secret`
+   
+ - Environment Variables
+   MONGODB_URI: The connection string for your MongoDB database.
+   JWT_SECRET: A secret key for JWT authentication.
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Start the development server: 
+ `npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Open http://localhost:3000 in your browser to view the app.
 
 
+## Detailed Features 
+1. User Authentication
+- Sign Up: Users can create an account using username, Bio , email and password.
+- Log In : Users can log in to their account using their credentials.
+- Log Out: Users can log out of their account.
 
+2. Posts
+- Create Post: Users can create new posts with text content and Image content.
+- Edit Post: Users can edit their own posts.
+- Delete Post: Users can delete their own posts.
+
+3. User Interaction
+- Freind/Unfriend Users: Users can make friend or can unfriend other users.
+- User can see thier friends profile only if not friend then profile will not be seen.
+
+4. User Profile
+- View Profile: Users can view their own profile and the profiles of their friends.
+- Profile Details: Profile page shows user's posts, friends, and his all posts..
 
 ## TODO
 
