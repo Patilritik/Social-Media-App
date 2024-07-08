@@ -44,16 +44,16 @@ export default function Settings() {
         if (response.status === 200) {
             if (detailTobeUpdate == userName) {
                 localStorage.setItem('loggedinUserName', detailTobeUpdate)
-                toast.success("Username Update Successfully")
+                toast.success("Username Updated Successfully")
             }
             else if (detailTobeUpdate == bio) {
-                toast.success("Bio Update Successfully")
+                toast.success("Bio Updated Successfully")
             }
             else if (detailTobeUpdate == Email) {
-                toast.success("Email Update Successfully")
+                toast.success("Email Updated Successfully")
             }
             else if (detailTobeUpdate == Password) {
-                toast.success("Password Update Successfully")
+                toast.success("Password Updated Successfully")
             }
             router.push('/Home');
             setUserName("")
@@ -63,6 +63,7 @@ export default function Settings() {
         }
         else {
             toast.error("Invalid Action")
+            router.push("/Home");
         }
     }
 
@@ -71,7 +72,7 @@ export default function Settings() {
         console.log(confirmresponse);
         setisLoading(true)
         if (confirmresponse) {
-            const userName = usernameFromLocalStorage;
+            const userName = localStorage.getItem('loggedinUserName');
             const res = await fetch('/api/Updation', {
                 method: "DELETE",
                 headers: {

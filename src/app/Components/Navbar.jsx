@@ -45,18 +45,18 @@ export default function Navbar() {
   return (
     <>
       <header class="border border-b-gray-300  bg-blue-400">
-        <nav class="container mx-auto px-2 py-3">
+        <nav class="container mx-auto  py-3">
           <div class="flex items-center justify-between">
             <div class="text-black font-bold text-xl">
               <Link href="/Home">Social Media App</Link>
             </div>
 
-
-            <div class="hidden md:block space-x-2 ">
+            {/* Search bar */}
+            {/* <div class="hidden md:block space-x-2 ">
               <input type="search" name="Search" id=""
                 className='border-none focus:outline-none px-2 py-1 rounded bg-gray-200' placeholder='Search' />
               <button><CiSearch className='w-6 h-6' /></button>
-            </div>
+            </div> */}
 
             {/* for large screen size */}
             <div class="hidden md:block">

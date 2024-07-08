@@ -98,7 +98,7 @@ export default function Signup() {
                         // onChange={(e)=>setDetails(details.userName = e.target.value)}
                         />
                         <input
-                            type="text"
+                            type="email"
                             placeholder="Enter email"
                             value={details.email}
                             className="border rounded my-10 p-2 items-center focus:outline-none block m-auto w-80"
